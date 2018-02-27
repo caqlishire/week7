@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "My week 7 Script"
+echo "where we at t start our journey"
+pwd
+echo "lets test the system logger by sendig log message manually"
+logger -p daemon.info something bad just happened
+echo "lets load additional configuration files"
+IncludeConfig /etc/rsyslog.d/*.conf
+echo "lets create plain text"
+/etc/passwd
+echo " we going to create encrypted password"
+/etc/shadow
+echo "lets set our RTC to our karne's UTC clock"
+hwclock --hwtosys --utc
+echo "now we gonna check current time in seconds"
+date +%s
+echo "lets set time zone"
+TZ=US/Central date
+echo "set your system time from the network with ntpdate"
+hwclock --systohc --utc
+
